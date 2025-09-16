@@ -1,0 +1,130 @@
+.custom-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.custom-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #64748b;
+}
+.content-titles {
+  height: 60px;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.custom-card {
+  padding: 32px;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  max-width: 672px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #1a2856;
+  margin-bottom: 20px;
+}
+.activity-group {
+  margin-bottom: 32px;
+}
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #1a2856;
+}
+
+.items-list {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  gap: 12px;
+}
+.items-list hr {
+  all: unset;
+  height: 1px;
+  margin: 12px 0;
+  display: block;
+  background-color: #e2e8f0;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remove-btn i {
+  padding: 5.75px;
+  color: #e95f5f;
+  font-size: 12.5px;
+}
+
+.remove-btn:hover {
+  background-color: #fee2e2;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+.custom-input {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  height: 40px;
+}
+.custom-input:focus {
+  outline: none;
+  border: 1px solid #3b82f6;
+  box-shadow: none;
+}
+.custom-input-group:has(input:focus) label {
+  color: #3b82f6;
+}
+.error-message {
+  gap: 4px;
+  color: #d71d1d;
+  margin-top: 8px;
+}
+
+.error-message p {
+  font-size: 12px;
+  line-height: 16px;
+  vertical-align: middle;
+  font-weight: 400;
+}
+.custom-input-group {
+  margin-bottom: 20px !important;
+}
+.no-activities {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #1a2856;
+  font-family: "Inter", sans-serif;
+}
+.no-activities img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 8px;
+}

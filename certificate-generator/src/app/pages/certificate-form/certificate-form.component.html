@@ -1,0 +1,102 @@
+<form #form="ngForm" novalidate class="d-flex flex-column align-items-center">
+  <div class="content-titles">
+    <h1 class="fw-bold custom-title">Certificate Builder</h1>
+    <p class="mb-4 custom-subtitle">
+      Fill out the form below to create a new certificate.
+    </p>
+  </div>
+
+  <div class="custom-card w-100">
+    <h2 class="card-title">New Certificate</h2>
+    <div class="mb-3 custom-input-group">
+      <label
+        [ngClass]="{ 'text-danger': invalidField(nameRef) }"
+        for="certificateName"
+        class="form-label"
+        >Certificate Name</label
+      >
+      <input
+        [(ngModel)]="certicateValues.name"
+        #nameRef="ngModel"
+        maxlength="150"
+        required
+        name="certificateName"
+        type="text"
+        class="form-control custom-input"
+        placeholder="Enter certificate name"
+        id="certificateName"
+      />
+      @if(invalidField(nameRef)) {
+      <div class="d-flex align-items-center mt-1 error-message">
+        <i class="ph ph-warning-circle"></i>
+        <p class="m-0">Certificate Name is required</p>
+      </div>
+      }
+    </div>
+    <div class="mb-3 d-flex align-items-end custom-input-group">
+      <div class="me-2 flex-grow-1 custom-input-group-activity">
+        <label
+          [ngClass]="{ 'text-danger': invalidField(activityRef) }"
+          for="activity"
+          class="form-label"
+          >Activity</label
+        >
+        <input
+          [(ngModel)]="activity"
+          #activityRef="ngModel"
+          maxlength="50"
+          name="activity"
+          type="text"
+          class="form-control custom-input"
+          placeholder="Enter activity"
+          id="activity"
+        />
+        <!-- @if(invalidField(activityRef)) {
+        <div class="d-flex align-items-center mt-1 error-message">
+          <i class="ph ph-warning-circle"></i>
+          <p class="m-0">Activity is required</p>
+        </div>
+        } -->
+      </div>
+      <app-secondary-button
+        (click)="addNewActivity()"
+        [disabled]="isValidActivity()"
+        phClass="ph ph-plus"
+        buttonText="Add new"
+        [ngStyle]="invalidField(activityRef) ? { 'margin-bottom': '20px' } : {}"
+      ></app-secondary-button>
+    </div>
+    <div class="activity-group">
+      <label class="form-label"> List of activities</label>
+
+      <div class="items-list w-100">
+        @if(!certicateValues.activities || certicateValues.activities.length ==
+        0) {
+        <div class="no-activities d-flex flex-column align-items-center">
+          <img
+            src="/certificate/undraw_file-search_cbur.svg"
+            alt="no-activities"
+          />
+          <span>No activities added yet</span>
+        </div>
+        } @for (item of certicateValues.activities || []; track $index){
+        <div class="activity-item">
+          <span class="activity-item-text">
+            {{ item }}
+          </span>
+          <div (click)="deleteActivity($index)" class="remove-btn">
+            <i class="ph-bold ph-x"></i>
+          </div>
+        </div>
+        @if ($index + 1 != (certicateValues.activities || []).length) {
+        <hr />
+        } }
+      </div>
+    </div>
+    <app-primary-button
+      (click)="submitCertificateForm()"
+      [disable]="isValidForm()"
+      [buttonText]="'Generate Certificate'"
+    ></app-primary-button>
+  </div>
+</form>

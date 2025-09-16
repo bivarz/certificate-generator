@@ -1,0 +1,37 @@
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem 2rem;
+  border: 1px solid #e2e8f0;
+  padding-right: 28px;
+  padding-left: 12px;
+}
+.navbar i {
+  font-size: 20px;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.active {
+  color: #3b5ac2;
+}
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: #3b5ac2;
+}
+.badge {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  background-color: #e95f5f;
+  color: white;
+  border-radius: 100%;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: 600;
+}

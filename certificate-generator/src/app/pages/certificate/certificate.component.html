@@ -1,0 +1,58 @@
+@if(certificate){
+<div class="d-flex flex-column align-items-center">
+  <div class="d-flex justify-content-between certificate-menu w-100">
+    <div routerLink="/" class="d-flex align-items-center back-btn">
+      <i class="ph ph-arrow-left"></i>
+      <p class="m-0">Back</p>
+    </div>
+
+    <app-secondary-button
+      phClass="ph ph-download-simple"
+      buttonText="Download"
+      (click)="downloadCertificate()"
+    ></app-secondary-button>
+  </div>
+  <!-- Certificate Area to Download -->
+  <div
+    #certificadoContainer
+    class="certificate d-flex justify-content-center align-items-center"
+  >
+    <img
+      src="/certificate/certificate-ribbon.png"
+      alt="medal-icon"
+      class="medal-icon"
+    />
+    <div class="certificate-content">
+      <img
+        src="/certificate/certificate-signature.svg"
+        alt="signature"
+        class="signature-img"
+      />
+      <div class="certificate-info d-flex align-items-center flex-column">
+        <div class="certificate-title-container">
+          <h1>Certificate of Completion</h1>
+          <p class="m-0">This certificate proves that</p>
+        </div>
+        <div class="certificate-name-container">
+          <p class="name m-0">{{ certificate.name }}</p>
+        </div>
+
+        <div class="activities-list-group">
+          <p class="m-0 activities-list-title">
+            Successfully completed the following activities:
+          </p>
+
+          <p class="activities-list">{{ certificate.activities.join(", ") }}</p>
+        </div>
+      </div>
+      <div>
+        <p class="date">on {{ certificate.createdAt | date : "mediumDate" }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- Certificate Area to Download end -->
+</div>
+} @if(!certificate){
+<app-not-found></app-not-found>
+
+}

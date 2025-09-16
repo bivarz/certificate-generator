@@ -1,0 +1,21 @@
+<div class="not-found-container">
+  <div class="w-100 d-flex justify-content-center">
+    <img src="page-not-found/404-space-1.svg" alt="not-found" />
+  </div>
+  <div class="not-found-text">
+    <span
+      >The certificate you are trying to access does not exist or has been
+      deleted.</span
+    >
+    <span>
+      Try going back to our homepage,or
+      <a routerLink="/certificate/new"
+        ><strong>create a new certificate</strong></a
+      >
+    </span>
+  </div>
+  <app-primary-button
+    (click)="goToHomepage()"
+    buttonText="Go to Homepage"
+  ></app-primary-button>
+</div>
