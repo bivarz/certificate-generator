@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-logo" routerLink="/">
+      <img src="navbar/logo.svg" alt="logo" />
+    </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item d-flex align-items-center">
+          <i
+            class="ph ph-circles-three-plus active"
+            routerLinkActive="active"
+            [ngClass]="{ active: rlag.isActive }"
+          ></i>
+          <a
+            routerLink="/certificate/new"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link"
+            aria-current="page"
+            href="#"
+            #rlag="routerLinkActive"
+            >Generate Certificate</a
+          >
+        </li>
+        <li class="nav-item d-flex align-items-center ms-3 position-relative">
+          <i class="ph ph-certificate" [ngClass]="{ active: rla.isActive }"></i>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            #rla="routerLinkActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Certificate List</a
+          >
+          @if (certificatesCount > 0) {
+          <span class="badge">{{ certificatesCount }}</span
+          >}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

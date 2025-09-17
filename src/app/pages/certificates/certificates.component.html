@@ -1,0 +1,25 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="content-titles">
+    <h1 class="fw-bold mb-2 custom-title">Generated Certificates</h1>
+    <p class="mb-4 custom-subtitle">All generated certificates.</p>
+  </div>
+
+  @if(certificates.length === 0) {
+  <div class="card custom-card w-100">
+    <i class="ph ph-certificate active"></i>
+    <div class="custom-info">
+      <h3 class="card-title">No certificates found.</h3>
+      <p class="card-subtitle">Generate certificates to view them here.</p>
+    </div>
+    <app-secondary-button
+      routerLink="/certificate/new"
+      buttonText="Generate Certificate"
+    ></app-secondary-button>
+  </div>
+  }
+
+  <div class="certificate-list w-100">
+    @for (certificate of certificates; track $index){
+    <app-certificate-item [certificate]="certificate"></app-certificate-item>}
+  </div>
+</div>

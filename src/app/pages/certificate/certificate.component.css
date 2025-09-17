@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.certificate-menu {
+  /* margin: 16px 0; */
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+}
+
+.back-btn {
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 600;
+  vertical-align: middle;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.back-btn i {
+  font-size: 20px;
+  color: #64748b;
+  color: #64748b;
+}
+
+.certificate {
+  margin-top: 32px;
+  background: none;
+  background-image: url(../../../../public/certificate/ertificate-bg.png);
+  width: 800px;
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+}
+.certificate-content p {
+  margin: 0;
+}
+.certificate-content {
+  width: 720px;
+  height: 470px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+.medal-icon {
+  z-index: 1;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.certificate-info {
+  margin: 64px 40px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.certificate-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.certificate-title-container h1 {
+  font-weight: 900;
+  line-height: 160%;
+  letter-spacing: 10%;
+  font-size: 24px;
+  text-align: center;
+  color: #1a2856;
+}
+.certificate-title-container p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #121621;
+}
+.name {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 80px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #3b5ac2;
+  font-family: "Dancing Script", sans-serif;
+}
+.activities-list-group {
+  max-width: 416px;
+}
+
+.activities-list-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #121621;
+  margin-bottom: 8px !important;
+}
+
+.activities-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #121621;
+}
+.date {
+  color: #121621;
+  font-weight: 700;
+  font-size: 11.2px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+}
+.signature-img {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 64px;
+  height: auto;
+}
